@@ -17,7 +17,9 @@
 <script>
     var nrPlanta = location.search
     nrPlanta = nrPlanta.replace("?nrPlanta=", "");
-    document.write ("<img src='PL" + nrPlanta + ".jpg' b0rder =  '1'><img src='FL" + nrPlanta + ".jpg' b0rder =  '1'>")
+    var nrPlantaZero = "00000" + nrPlanta.replace("?nrPlanta=", "");
+    nrPlantaZero = nrPlantaZero.substring(nrPlantaZero.length-(nrPlantaZero.length-nrPlanta.length), nrPlantaZero.length);
+    document.write ("<img src='PL" + nrPlantaZero + ".jpg' b0rder =  '1'><img src='FL" + nrPlantaZero + ".jpg' b0rder =  '1'>")
 </script>
 
 </body>
